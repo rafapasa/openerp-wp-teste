@@ -1,0 +1,21 @@
+{
+  "id": "vitamina",
+  "descricao": "Cliente pede vitamina e escolhe pelo número",
+  "mensagens": [
+    {
+      "texto": "Boa Tarde.",
+      "espera_resposta": true,
+      "resposta_esperada_contem": ["olá", "tarde", "oi", "bom dia", "boa tarde"]
+    },
+    {
+      "texto": "Pode me ajudar com vitamina?",
+      "espera_resposta": true,
+      "resposta_esperada_contem": ["vitamina", "opç", "escolha"]
+    },
+    {
+      "texto": "1",
+      "espera_resposta": true,
+      "resposta_esperada_contem": ["carrinho", "total", "adicion"]
+    }
+  ]
+}

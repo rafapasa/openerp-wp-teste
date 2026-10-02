@@ -1,0 +1,16 @@
+{
+  "id": "gripe",
+  "descricao": "Cliente pergunta por remédio pra gripe sem saber nome",
+  "mensagens": [
+    {
+      "texto": "Boa tarde",
+      "espera_resposta": true,
+      "resposta_esperada_contem": ["tarde", "olá", "oi"]
+    },
+    {
+      "texto": "remédio pra gripe, tem?",
+      "espera_resposta": true,
+      "resposta_esperada_contem": ["gripe", "resfriado"]
+    }
+  ]
+}

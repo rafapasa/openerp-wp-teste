@@ -1,0 +1,20 @@
+services:
+  whatsapp-mock:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: mock
+    image: rafapasa/whatsapp-mock:test
+    container_name: whatsapp-mock
+    restart: unless-stopped
+    environment:
+      MOCK_PORT: "9000"
+    ports:
+      - "9000:9000"
+    networks:
+      - mcp-network
+
+networks:
+  mcp-network:
+    external: true
+    name: mcp-network
