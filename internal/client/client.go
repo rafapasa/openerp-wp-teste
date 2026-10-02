@@ -6,9 +6,8 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"rafapasa/openerp-wp-teste/internal/dto"
 	"time"
-
-	"github.com/rafapasa/openerp-wp-teste/internal/dto"
 )
 
 type Client struct {

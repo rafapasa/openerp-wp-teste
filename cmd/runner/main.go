@@ -4,13 +4,12 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"rafapasa/openerp-wp-teste/internal/client"
+	"rafapasa/openerp-wp-teste/internal/config"
+	"rafapasa/openerp-wp-teste/internal/dto"
 	"strings"
 	"sync"
 	"time"
-
-	"github.com/rafapasa/openerp-wp-teste/internal/client"
-	"github.com/rafapasa/openerp-wp-teste/internal/config"
-	"github.com/rafapasa/openerp-wp-teste/internal/dto"
 )
 
 type estatisticas struct {

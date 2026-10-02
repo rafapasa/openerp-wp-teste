@@ -4,9 +4,8 @@ import (
 	"encoding/json"
 	"os"
 	"path/filepath"
+	"rafapasa/openerp-wp-teste/internal/dto"
 	"sort"
-
-	"github.com/rafapasa/openerp-wp-teste/internal/dto"
 )
 
 func Load(path string) (*dto.Config, error) {
