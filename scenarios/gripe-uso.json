@@ -1,0 +1,17 @@
+{
+  "id": "gripe-uso",
+  "descricao": "Cliente não sabe o nome. A busca tem que achar pelo uso, não só pelo nome do produto.",
+  "mensagens": [
+    {
+      "texto": "remédio pra gripe, tem?",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "gripe",
+        "resfriado",
+        "opç",
+        "escolha",
+        "dipirona"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "ano-intervalo",
+  "descricao": "91/03 no nome da peça cobre o ano 2000. A lista não pode ignorar esse intervalo.",
+  "mensagens": [
+    {
+      "texto": "lanterna do uno 2000",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "uno",
+        "lant",
+        "2000",
+        "escolha",
+        "opç",
+        "carrinho",
+        "adicion"
+      ]
+    }
+  ]
+}

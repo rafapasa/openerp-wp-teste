@@ -1,0 +1,18 @@
+{
+  "id": "gol-generico",
+  "descricao": "Termo largo demais. Acima de 30 itens pede detalhe e não manda a lista.",
+  "mensagens": [
+    {
+      "texto": "preciso de uma peça do gol",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "encontrei",
+        "detalhe",
+        "lado",
+        "ano",
+        "peça",
+        "gol"
+      ]
+    }
+  ]
+}

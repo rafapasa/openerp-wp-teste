@@ -1,0 +1,19 @@
+{
+  "id": "batente-gol",
+  "descricao": "Três termos: batente, gol e 85. A lista curta pode trazer mais de um batente.",
+  "mensagens": [
+    {
+      "texto": "batente do gol 85",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "batente",
+        "gol",
+        "escolha",
+        "opç",
+        "encontrei",
+        "carrinho",
+        "adicion"
+      ]
+    }
+  ]
+}

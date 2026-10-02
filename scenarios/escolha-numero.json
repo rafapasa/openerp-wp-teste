@@ -1,0 +1,25 @@
+{
+  "id": "escolha-numero",
+  "descricao": "Lista curta. Cliente responde o número e o item entra no carrinho.",
+  "mensagens": [
+    {
+      "texto": "Pode me ajudar com vitamina?",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "vitamina",
+        "opç",
+        "escolha",
+        "1"
+      ]
+    },
+    {
+      "texto": "1",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "carrinho",
+        "total",
+        "adicion"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "lant-diant",
+  "descricao": "Cliente escreve como a peça está no estoque: Lant diant.",
+  "mensagens": [
+    {
+      "texto": "Lant diant do gol 2000",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "lant",
+        "gol",
+        "escolha",
+        "opç",
+        "encontrei",
+        "carrinho",
+        "adicion"
+      ]
+    }
+  ]
+}

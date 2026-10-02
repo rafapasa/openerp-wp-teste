@@ -22,7 +22,7 @@ func New(cfg *dto.Config) *Client {
 	}
 }
 
-func (c *Client) EnviarWebhook(scenarioID, texto string) (int, error) {
+func (c *Client) EnviarWebhook(scenarioID, from, texto string) (int, error) {
 	body := map[string]interface{}{
 		"object": "whatsapp_business_account",
 		"entry": []map[string]interface{}{
@@ -34,19 +34,19 @@ func (c *Client) EnviarWebhook(scenarioID, texto string) (int, error) {
 						"value": map[string]interface{}{
 							"messaging_product": "whatsapp",
 							"metadata": map[string]string{
-								"display_phone_number": c.cfg.From,
+								"display_phone_number": "15550000000",
 								"phone_number_id":      c.cfg.PhoneNumberID,
 							},
 							"contacts": []map[string]interface{}{
 								{
-									"profile": map[string]string{"name": c.cfg.ClienteNome},
-									"wa_id":   c.cfg.WaID,
+									"profile": map[string]string{"name": c.cfg.ClienteNome + " " + scenarioID},
+									"wa_id":   from,
 								},
 							},
 							"messages": []map[string]interface{}{
 								{
-									"from":      c.cfg.From,
-									"id":        fmt.Sprintf("wamid.%d", time.Now().UnixNano()),
+									"from":      from,
+									"id":        fmt.Sprintf("wamid.%s.%d", scenarioID, time.Now().UnixNano()),
 									"timestamp": fmt.Sprintf("%d", time.Now().Unix()),
 									"type":      "text",
 									"text":      map[string]string{"body": texto},
@@ -59,11 +59,9 @@ func (c *Client) EnviarWebhook(scenarioID, texto string) (int, error) {
 		},
 	}
 	data, _ := json.Marshal(body)
-
 	req, _ := http.NewRequest("POST", c.cfg.ServerURL+"/webhook", bytes.NewReader(data))
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("X-Scenario-ID", scenarioID)
-
 	resp, err := c.http.Do(req)
 	if err != nil {
 		return 0, err
@@ -73,8 +71,8 @@ func (c *Client) EnviarWebhook(scenarioID, texto string) (int, error) {
 	return resp.StatusCode, nil
 }
 
-func (c *Client) BuscarInbox(scenarioID string) (*dto.InboxResponse, error) {
-	resp, err := c.http.Get(c.cfg.MockURL + "/inbox?scenario_id=" + scenarioID)
+func (c *Client) BuscarInbox(phone string) (*dto.InboxResponse, error) {
+	resp, err := c.http.Get(c.cfg.MockURL + "/inbox?phone=" + phone)
 	if err != nil {
 		return nil, err
 	}
@@ -83,7 +81,6 @@ func (c *Client) BuscarInbox(scenarioID string) (*dto.InboxResponse, error) {
 		return nil, fmt.Errorf("mock retornou %d", resp.StatusCode)
 	}
 	data, _ := io.ReadAll(resp.Body)
-
 	var out dto.InboxResponse
 	if err := json.Unmarshal(data, &out); err != nil {
 		return nil, err
@@ -91,8 +88,8 @@ func (c *Client) BuscarInbox(scenarioID string) (*dto.InboxResponse, error) {
 	return &out, nil
 }
 
-func (c *Client) LimparInbox(scenarioID string) error {
-	req, _ := http.NewRequest("DELETE", c.cfg.MockURL+"/inbox?scenario_id="+scenarioID, nil)
+func (c *Client) LimparInbox(phone string) error {
+	req, _ := http.NewRequest("DELETE", c.cfg.MockURL+"/inbox?phone="+phone, nil)
 	resp, err := c.http.Do(req)
 	if err != nil {
 		return err

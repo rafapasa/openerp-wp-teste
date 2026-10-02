@@ -1,0 +1,11 @@
+{
+  "id": "saudacao",
+  "descricao": "Saudação sozinha. Não pode cair em busca de produto.",
+  "mensagens": [
+    {
+      "texto": "Boa tarde",
+      "espera_resposta": true,
+      "resposta_esperada_contem": ["tarde", "olá", "oi", "ajudar"]
+    }
+  ]
+}

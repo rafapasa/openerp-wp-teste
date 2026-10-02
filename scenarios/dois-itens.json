@@ -1,0 +1,18 @@
+{
+  "id": "dois-itens",
+  "descricao": "Dois itens na mesma frase. Nenhum dos dois pode sumir.",
+  "mensagens": [
+    {
+      "texto": "manda um batente do gol e uma arruela de aluminio",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "batente",
+        "arruela",
+        "escolha",
+        "opç",
+        "carrinho",
+        "adicion"
+      ]
+    }
+  ]
+}

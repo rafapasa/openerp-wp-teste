@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strings"
 	"sync"
 	"time"
 
@@ -27,63 +28,52 @@ func main() {
 	if port == "" {
 		port = "9000"
 	}
-
 	inbox := &Inbox{mensagens: make(map[string][]MensagemEnviada)}
-
-	app := fiber.New(fiber.Config{
-		DisableStartupMessage: true,
-	})
+	app := fiber.New(fiber.Config{DisableStartupMessage: true})
 
 	app.Post("/v:version/:phoneID/messages", func(c *fiber.Ctx) error {
-		var body struct {
-			MessagingProduct string `json:"messaging_product"`
-			To               string `json:"to"`
-			Type             string `json:"type"`
-			Text             struct {
-				Body string `json:"body"`
-			} `json:"text"`
-		}
+		var body map[string]interface{}
 		if err := c.BodyParser(&body); err != nil {
 			return c.Status(400).JSON(fiber.Map{"error": err.Error()})
 		}
-
-		scenarioID := c.Get("X-Scenario-ID")
-		if scenarioID == "" {
-			scenarioID = "_global"
+		to, _ := body["to"].(string)
+		texto := textoSaida(body)
+		chave := to
+		if chave == "" {
+			chave = "_global"
 		}
-
 		inbox.mu.Lock()
-		inbox.mensagens[scenarioID] = append(inbox.mensagens[scenarioID], MensagemEnviada{
-			ScenarioID: scenarioID,
-			Texto:      body.Text.Body,
+		inbox.mensagens[chave] = append(inbox.mensagens[chave], MensagemEnviada{
+			ScenarioID: chave,
+			Texto:      texto,
 			Timestamp:  time.Now().Format(time.RFC3339),
-			Para:       body.To,
+			Para:       to,
 		})
 		inbox.mu.Unlock()
-
-		log.Printf("[mock] scenario=%s → %.80s", scenarioID, body.Text.Body)
-
+		log.Printf("[mock] para=%s → %.80s", to, texto)
 		return c.Status(200).JSON(fiber.Map{
 			"messaging_product": "whatsapp",
-			"contacts":          []map[string]string{{"input": body.To, "wa_id": body.To}},
+			"contacts":          []map[string]string{{"input": to, "wa_id": to}},
 			"messages":          []map[string]string{{"id": fmt.Sprintf("wamid.mock.%d", time.Now().UnixNano())}},
 		})
 	})
 
 	app.Get("/inbox", func(c *fiber.Ctx) error {
-		sid := c.Query("scenario_id", "_global")
+		sid := c.Query("phone")
+		if sid == "" {
+			sid = c.Query("scenario_id", "_global")
+		}
 		inbox.mu.Lock()
 		msgs := append([]MensagemEnviada(nil), inbox.mensagens[sid]...)
 		inbox.mu.Unlock()
-		return c.JSON(fiber.Map{
-			"scenario_id": sid,
-			"total":       len(msgs),
-			"mensagens":   msgs,
-		})
+		return c.JSON(fiber.Map{"scenario_id": sid, "total": len(msgs), "mensagens": msgs})
 	})
 
 	app.Delete("/inbox", func(c *fiber.Ctx) error {
-		sid := c.Query("scenario_id", "_global")
+		sid := c.Query("phone")
+		if sid == "" {
+			sid = c.Query("scenario_id", "_global")
+		}
 		inbox.mu.Lock()
 		delete(inbox.mensagens, sid)
 		inbox.mu.Unlock()
@@ -96,4 +86,35 @@ func main() {
 
 	log.Printf("[mock] ouvindo em :%s", port)
 	log.Fatal(app.Listen("0.0.0.0:" + port))
+}
+
+func textoSaida(body map[string]interface{}) string {
+	var partes []string
+	if text, ok := body["text"].(map[string]interface{}); ok {
+		if b, ok := text["body"].(string); ok {
+			partes = append(partes, b)
+		}
+	}
+	if inter, ok := body["interactive"].(map[string]interface{}); ok {
+		if bodyMap, ok := inter["body"].(map[string]interface{}); ok {
+			if b, ok := bodyMap["text"].(string); ok {
+				partes = append(partes, b)
+			}
+		}
+		if action, ok := inter["action"].(map[string]interface{}); ok {
+			if botoes, ok := action["buttons"].([]interface{}); ok {
+				for _, raw := range botoes {
+					btn, ok := raw.(map[string]interface{})
+					if !ok {
+						continue
+					}
+					reply, _ := btn["reply"].(map[string]interface{})
+					if title, ok := reply["title"].(string); ok {
+						partes = append(partes, title)
+					}
+				}
+			}
+		}
+	}
+	return strings.TrimSpace(strings.Join(partes, "\n"))
 }

@@ -1,0 +1,19 @@
+{
+  "id": "lanterna",
+  "descricao": "Abreviação: lanterna deve achar LANT. Um item entra; vários viram lista ou pedido de detalhe.",
+  "mensagens": [
+    {
+      "texto": "preciso de uma lanterna pro meu carro",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "lant",
+        "lanterna",
+        "escolha",
+        "opç",
+        "encontrei",
+        "carrinho",
+        "adicion"
+      ]
+    }
+  ]
+}

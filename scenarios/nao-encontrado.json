@@ -1,0 +1,16 @@
+{
+  "id": "nao-encontrado",
+  "descricao": "Nenhum token casa. Não inventa item.",
+  "mensagens": [
+    {
+      "texto": "quero um xfrotz-999 inexistente",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "não encontrei",
+        "nao encontrei",
+        "catálogo",
+        "catalogo"
+      ]
+    }
+  ]
+}
