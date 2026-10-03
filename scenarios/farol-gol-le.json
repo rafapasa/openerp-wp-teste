@@ -1,0 +1,20 @@
+{
+  "id": "farol-gol-le",
+  "descricao": "Gol GV com le. Não pode trazer Palio, Uno nem lado direito.",
+  "mensagens": [
+    {
+      "texto": "farol gol gv le",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "gol",
+        "esquerdo"
+      ],
+      "resposta_nao_contem": [
+        "palio",
+        "uno",
+        "fiorino",
+        "direito"
+      ]
+    }
+  ]
+}

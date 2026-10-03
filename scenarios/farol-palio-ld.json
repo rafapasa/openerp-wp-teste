@@ -1,0 +1,20 @@
+{
+  "id": "farol-palio-ld",
+  "descricao": "Palio e ld. Lista curta não pode trazer o esquerdo nem Uno, Fiorino ou Gol.",
+  "mensagens": [
+    {
+      "texto": "preciso de um farol pro palio ld",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "palio",
+        "direito"
+      ],
+      "resposta_nao_contem": [
+        "esquerdo",
+        "uno",
+        "fiorino",
+        "gol"
+      ]
+    }
+  ]
+}

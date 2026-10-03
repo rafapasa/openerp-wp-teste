@@ -1,7 +1,7 @@
 {
   "server_url": "https://teste.b.etoolstec.com.br",
   "mock_url": "http://localhost:9000",
-  "threads": 5,
+  "threads": 1,
   "timeout_seconds": 60,
   "poll_interval_ms": 500,
   "phone_number_id": "1337919362728144",

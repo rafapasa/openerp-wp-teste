@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"hash/fnv"
 	"os"
-	"sort"
 	"rafapasa/openerp-wp-teste/internal/client"
 	"rafapasa/openerp-wp-teste/internal/config"
 	"rafapasa/openerp-wp-teste/internal/dto"
+	"sort"
 	"strings"
 	"sync"
 	"time"
@@ -203,26 +203,28 @@ func executarScenario(cli *client.Client, cfg *dto.Config, s dto.Scenario, stats
 			continue
 		}
 		log.add(worker, fmt.Sprintf("  ← %s", umaLinha(resposta)))
-		if len(msg.RespostaEsperadaContem) == 0 || contemAlgum(resposta, msg.RespostaEsperadaContem) {
-			log.add(worker, "  ✅")
-			stats.registrar("ok", status)
-			res.Ok++
+		if len(msg.RespostaEsperadaContem) > 0 && !contemAlgum(resposta, msg.RespostaEsperadaContem) {
+			log.add(worker, fmt.Sprintf("  ❌ esperava: %s", strings.Join(msg.RespostaEsperadaContem, " | ")))
+			stats.registrar("falha", status)
+			res.Falha++
 			continue
 		}
-		log.add(worker, fmt.Sprintf("  ❌ esperava: %s", strings.Join(msg.RespostaEsperadaContem, " | ")))
-		stats.registrar("falha", status)
-		res.Falha++
+		if proibido := contemAlgumTexto(resposta, msg.RespostaNaoContem); proibido != "" {
+			log.add(worker, fmt.Sprintf("  ❌ não podia conter: %s", proibido))
+			stats.registrar("falha", status)
+			res.Falha++
+			continue
+		}
+		log.add(worker, "  ✅")
+		stats.registrar("ok", status)
+		res.Ok++
 	}
 	log.add(worker, "")
 	stats.fechar(res)
 }
 
 func umaLinha(s string) string {
-	s = strings.ReplaceAll(s, "\n", " | ")
-	if len(s) > 160 {
-		return s[:160]
-	}
-	return s
+	return strings.ReplaceAll(s, "\n", " | ")
 }
 
 func aguardarResposta(cli *client.Client, phone string, cfg *dto.Config, antes int) (string, bool) {
@@ -247,6 +249,17 @@ func contarInbox(cli *client.Client, phone string) int {
 		return 0
 	}
 	return inbox.Total
+}
+
+func contemAlgumTexto(texto string, alvos []string) string {
+	low := strings.ToLower(texto)
+	for _, a := range alvos {
+		a = strings.ToLower(strings.TrimSpace(a))
+		if a != "" && strings.Contains(low, a) {
+			return a
+		}
+	}
+	return ""
 }
 
 func contemAlgum(texto string, alvos []string) bool {

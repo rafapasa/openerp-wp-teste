@@ -1,0 +1,19 @@
+{
+  "id": "farol-uno-fire-ld",
+  "descricao": "Uno Fire com ld. Fiorino pode aparecer porque está no mesmo nome. Palio e Gol não.",
+  "mensagens": [
+    {
+      "texto": "farol uno fire ld",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "uno",
+        "direito"
+      ],
+      "resposta_nao_contem": [
+        "palio",
+        "gol",
+        "esquerdo"
+      ]
+    }
+  ]
+}

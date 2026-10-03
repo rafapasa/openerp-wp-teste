@@ -1,0 +1,23 @@
+{
+  "id": "farol-palio-le",
+  "descricao": "Lado esquerdo por extenso. Não pode misturar o direito nem outra marca.",
+  "mensagens": [
+    {
+      "texto": "farol palio lado esquerdo",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+	"fiat",
+	"farol",
+        "palio",
+        "esquerdo",
+	"08"
+      ],
+      "resposta_nao_contem": [
+        "direito",
+        "uno",
+        "fiorino",
+        "gol"
+      ]
+    }
+  ]
+}

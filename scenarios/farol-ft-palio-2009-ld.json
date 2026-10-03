@@ -1,0 +1,20 @@
+{
+  "id": "farol-ft-palio-2009-ld",
+  "descricao": "ft é Fiat, não farol. Com Palio, 2009 e ld só pode ficar o Palio direito da faixa 08/09.",
+  "mensagens": [
+    {
+      "texto": "farol ft palio 2009 ld",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "fiat",
+        "palio",
+        "direito"
+      ],
+      "resposta_nao_contem": [
+        "esquerdo",
+        "gol",
+        "volkswagen"
+      ]
+    }
+  ]
+}

@@ -17,6 +17,7 @@ type Mensagem struct {
 	Texto                  string   `json:"texto"`
 	EsperaResposta         bool     `json:"espera_resposta"`
 	RespostaEsperadaContem []string `json:"resposta_esperada_contem,omitempty"`
+	RespostaNaoContem      []string `json:"resposta_nao_contem,omitempty"`
 }
 
 type Scenario struct {

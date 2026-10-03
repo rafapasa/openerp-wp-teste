@@ -1,0 +1,12 @@
+{
+  "id": "farol-palio",
+  "descricao": "Lista curta de farol não pode parar o refino. Palio e 2009 têm que tirar Uno, Fiorino e Gol.",
+  "mensagens": [
+    {
+      "texto": "preciso de um farol pro meu palio 2009 tem",
+      "espera_resposta": true,
+      "resposta_esperada_contem": ["palio", "09"],
+      "resposta_nao_contem": ["volkswagen", "gol", "volk", "vw"]
+    }
+  ]
+}
