@@ -1,0 +1,20 @@
+{
+  "id": "abrev-dian-diant-ld",
+  "descricao": "Abreviação abrev-dian-diant-ld",
+  "mensagens": [
+    {
+      "texto": "acab paralama dian strada ld",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "paralama",
+        "strada",
+        "dianteiro",
+        "direito"
+      ],
+      "resposta_nao_contem": [
+        "traseiro",
+        "esquerdo"
+      ]
+    }
+  ]
+}

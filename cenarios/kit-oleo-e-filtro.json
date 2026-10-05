@@ -1,0 +1,19 @@
+{
+  "id": "kit-oleo-e-filtro",
+  "descricao": "Kit óleo - abreviações oleo sint 5w30",
+  "mensagens": [
+    {
+      "texto": "oleo 5w30 sintetico 1l",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "oleo",
+        "5w30",
+        "sintetico"
+      ],
+      "resposta_nao_contem": [
+        "00w20",
+        "aditivo"
+      ]
+    }
+  ]
+}

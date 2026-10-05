@@ -1,0 +1,19 @@
+{
+  "id": "massa-plastica-cinza",
+  "descricao": "Abreviação massa-plastica-cinza",
+  "mensagens": [
+    {
+      "texto": "massa plastica cinza 1kg",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "massa",
+        "plastica",
+        "cinza"
+      ],
+      "resposta_nao_contem": [
+        "branca",
+        "poliester"
+      ]
+    }
+  ]
+}

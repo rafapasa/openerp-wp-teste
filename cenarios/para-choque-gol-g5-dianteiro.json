@@ -1,0 +1,23 @@
+{
+  "id": "para-choque-gol-g5-dianteiro",
+  "descricao": "Para-choque dianteiro Gol G5 - ld/le não pode confundir",
+  "mensagens": [
+    {
+      "texto": "parachoque dianteiro gol g5",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "parachoque",
+        "gol",
+        "g5",
+        "dianteiro",
+        "escolha",
+        "carrinho"
+      ],
+      "resposta_nao_contem": [
+        "traseiro",
+        "uno",
+        "palio"
+      ]
+    }
+  ]
+}

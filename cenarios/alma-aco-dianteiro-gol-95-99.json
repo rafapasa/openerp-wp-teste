@@ -1,0 +1,20 @@
+{
+  "id": "alma-aco-dianteiro-gol-95-99",
+  "descricao": "Alma de aço - busca com ano 97 dentro de 95/99",
+  "mensagens": [
+    {
+      "texto": "alma aco dianteiro gol 97",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "alma",
+        "aco",
+        "gol",
+        "dianteiro"
+      ],
+      "resposta_nao_contem": [
+        "traseiro",
+        "palio"
+      ]
+    }
+  ]
+}

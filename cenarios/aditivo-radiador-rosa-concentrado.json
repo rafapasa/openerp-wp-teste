@@ -1,0 +1,19 @@
+{
+  "id": "aditivo-radiador-rosa-concentrado",
+  "descricao": "Aditivo radiador rosa - duas palavras chave",
+  "mensagens": [
+    {
+      "texto": "aditivo radiador rosa concentrado",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "aditivo",
+        "radiador",
+        "rosa"
+      ],
+      "resposta_nao_contem": [
+        "verde",
+        "oleo"
+      ]
+    }
+  ]
+}

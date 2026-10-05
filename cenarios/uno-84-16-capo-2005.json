@@ -1,0 +1,17 @@
+{
+  "id": "uno-84-16-capo-2005",
+  "descricao": "Ano intervalo uno-84-16-capo-2005",
+  "mensagens": [
+    {
+      "texto": "amortecedor capo uno 2005",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "uno",
+        "capo"
+      ],
+      "resposta_nao_contem": [
+        "gol"
+      ]
+    }
+  ]
+}

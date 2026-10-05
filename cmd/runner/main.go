@@ -68,7 +68,7 @@ func (f *fluxo) add(worker int, linha string) {
 
 func main() {
 	cfgPath := flag.String("config", "./config.json", "arquivo de configuração")
-	scenarioFiltro := flag.String("scenario", "", "executa só um cenário (id)")
+	scenarioFiltro := flag.String("cenario", "", "executa só um cenário (id)")
 	flag.Parse()
 
 	cfg, err := config.Load(*cfgPath)

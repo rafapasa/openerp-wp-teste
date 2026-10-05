@@ -1,0 +1,19 @@
+{
+  "id": "dois-itens-farol-e-lanterna",
+  "descricao": "Dois itens diferentes: farol gol e lanterna uno",
+  "mensagens": [
+    {
+      "texto": "preciso farol gol g5 ld e lanterna uno 2000",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "farol",
+        "gol",
+        "lanterna",
+        "uno",
+        "escolha",
+        "carrinho"
+      ],
+      "resposta_nao_contem": []
+    }
+  ]
+}

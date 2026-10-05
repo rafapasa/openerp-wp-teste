@@ -1,0 +1,20 @@
+{
+  "id": "paralama-dianteiro-strada-ld",
+  "descricao": "Para-lama dianteiro Strada LD com abreviação paralama",
+  "mensagens": [
+    {
+      "texto": "paralama diant strada ld",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "paralama",
+        "strada",
+        "direito",
+        "dianteiro"
+      ],
+      "resposta_nao_contem": [
+        "esquerdo",
+        "traseiro"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "tres-itens-basico",
+  "descricao": "Três itens: arruela, batente e farol",
+  "mensagens": [
+    {
+      "texto": "manda arruela alum, batente gol 85 e farol palio ld",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "arruela",
+        "batente",
+        "farol",
+        "palio",
+        "escolha"
+      ],
+      "resposta_nao_contem": []
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "abrev-acop-rotula",
+  "descricao": "Abreviação abrev-acop-rotula",
+  "mensagens": [
+    {
+      "texto": "acoplamento alavanca gol pas san rotula",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "acoplamento",
+        "alavanca",
+        "gol",
+        "rotula"
+      ],
+      "resposta_nao_contem": [
+        "palio"
+      ]
+    }
+  ]
+}

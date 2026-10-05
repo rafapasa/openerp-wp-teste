@@ -1,0 +1,20 @@
+{
+  "id": "farol-corsa-96-03-ld",
+  "descricao": "Cenário marca/modelo farol-corsa-96-03-ld",
+  "mensagens": [
+    {
+      "texto": "farol corsa 99 ld",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "corsa",
+        "direito",
+        "escolha",
+        "carrinho"
+      ],
+      "resposta_nao_contem": [
+        "gol",
+        "esquerdo"
+      ]
+    }
+  ]
+}

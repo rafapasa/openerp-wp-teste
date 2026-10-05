@@ -1,0 +1,18 @@
+{
+  "id": "palio-01-plus-2008",
+  "descricao": "Ano intervalo palio-01-plus-2008",
+  "mensagens": [
+    {
+      "texto": "amortecedor diant palio 2008",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "palio",
+        "amortecedor",
+        "dianteiro"
+      ],
+      "resposta_nao_contem": [
+        "gol"
+      ]
+    }
+  ]
+}

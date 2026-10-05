@@ -1,0 +1,18 @@
+{
+  "id": "corsa-96-03-acab",
+  "descricao": "Ano intervalo corsa-96-03-acab",
+  "mensagens": [
+    {
+      "texto": "acabamento paralama corsa 99 ld",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "corsa",
+        "paralama",
+        "direito"
+      ],
+      "resposta_nao_contem": [
+        "gol"
+      ]
+    }
+  ]
+}

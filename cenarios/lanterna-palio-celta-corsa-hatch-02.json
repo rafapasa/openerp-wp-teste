@@ -1,0 +1,19 @@
+{
+  "id": "lanterna-palio-celta-corsa-hatch-02",
+  "descricao": "Lanterna que serve Palio/Celta/Corsa - produto 784",
+  "mensagens": [
+    {
+      "texto": "amortecedor capo traseiro palio celta corsa hatch 2005",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "amortecedor",
+        "capo",
+        "traseiro"
+      ],
+      "resposta_nao_contem": [
+        "dianteiro",
+        "gol"
+      ]
+    }
+  ]
+}

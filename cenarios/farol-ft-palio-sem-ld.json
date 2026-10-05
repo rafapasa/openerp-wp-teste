@@ -1,0 +1,19 @@
+{
+  "id": "farol-ft-palio-sem-ld",
+  "descricao": "FT Palio sem LD - tem que listar LD e LE mas priorizar",
+  "mensagens": [
+    {
+      "texto": "farol ft palio 2009",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "fiat",
+        "palio",
+        "farol"
+      ],
+      "resposta_nao_contem": [
+        "gol",
+        "volkswagen"
+      ]
+    }
+  ]
+}

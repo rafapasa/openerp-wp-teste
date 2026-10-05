@@ -1,0 +1,18 @@
+{
+  "id": "saveiro-gv-vi-10",
+  "descricao": "Ano intervalo saveiro-gv-vi-10",
+  "mensagens": [
+    {
+      "texto": "acabamento cacamba saveiro 2015",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "saveiro",
+        "cacamba"
+      ],
+      "resposta_nao_contem": [
+        "strada",
+        "gol"
+      ]
+    }
+  ]
+}

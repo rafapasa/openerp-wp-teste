@@ -1,0 +1,21 @@
+{
+  "id": "grade-dianteira-gol-g6",
+  "descricao": "Cenário marca/modelo grade-dianteira-gol-g6",
+  "mensagens": [
+    {
+      "texto": "grade diant gol g6",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "gol",
+        "grade",
+        "dianteira",
+        "escolha",
+        "carrinho"
+      ],
+      "resposta_nao_contem": [
+        "palio",
+        "traseira"
+      ]
+    }
+  ]
+}

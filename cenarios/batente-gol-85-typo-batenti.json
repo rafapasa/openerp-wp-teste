@@ -1,0 +1,18 @@
+{
+  "id": "batente-gol-85-typo-batenti",
+  "descricao": "Batente escrito batenti - erro fonético",
+  "mensagens": [
+    {
+      "texto": "batenti do gol 85",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "batente",
+        "gol"
+      ],
+      "resposta_nao_contem": [
+        "palio",
+        "uno"
+      ]
+    }
+  ]
+}

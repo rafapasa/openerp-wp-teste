@@ -1,0 +1,20 @@
+{
+  "id": "acabamento-cacamba-strada-14",
+  "descricao": "Acabamento caçamba Strada 14 - ano cobre 2020",
+  "mensagens": [
+    {
+      "texto": "acabamento cacamba strada 2020",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "acabamento",
+        "cacamba",
+        "strada",
+        "escolha"
+      ],
+      "resposta_nao_contem": [
+        "saveiro",
+        "gol"
+      ]
+    }
+  ]
+}

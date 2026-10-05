@@ -1,0 +1,20 @@
+{
+  "id": "abrev-amort-cap-tras",
+  "descricao": "Abreviação abrev-amort-cap-tras",
+  "mensagens": [
+    {
+      "texto": "amort cap tras gol 95/99",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "amortecedor",
+        "capo",
+        "traseiro",
+        "gol"
+      ],
+      "resposta_nao_contem": [
+        "dianteiro",
+        "palio"
+      ]
+    }
+  ]
+}

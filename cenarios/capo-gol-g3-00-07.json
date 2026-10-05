@@ -1,0 +1,20 @@
+{
+  "id": "capo-gol-g3-00-07",
+  "descricao": "Cenário marca/modelo capo-gol-g3-00-07",
+  "mensagens": [
+    {
+      "texto": "capo gol g3 2003",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "gol",
+        "capo",
+        "escolha",
+        "carrinho"
+      ],
+      "resposta_nao_contem": [
+        "palio",
+        "uno"
+      ]
+    }
+  ]
+}

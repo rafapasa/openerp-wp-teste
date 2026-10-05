@@ -1,0 +1,19 @@
+{
+  "id": "amortecedor-capo-traseiro-uno-84-16",
+  "descricao": "Amortecedor capo traseiro Uno 84/16 - ano 2010",
+  "mensagens": [
+    {
+      "texto": "amortecedor capo uno 2010",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "amortecedor",
+        "capo",
+        "uno"
+      ],
+      "resposta_nao_contem": [
+        "gol",
+        "palio"
+      ]
+    }
+  ]
+}

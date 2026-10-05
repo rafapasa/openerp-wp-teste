@@ -1,0 +1,19 @@
+{
+  "id": "voyage-88-94-maqna",
+  "descricao": "Ano intervalo voyage-88-94-maqna",
+  "mensagens": [
+    {
+      "texto": "maquina vidro voyage 90 le",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "voyage",
+        "vidro",
+        "esquerdo"
+      ],
+      "resposta_nao_contem": [
+        "direito",
+        "palio"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "fiesta-01-14-todos",
+  "descricao": "Ano intervalo fiesta-01-14-todos",
+  "mensagens": [
+    {
+      "texto": "amortecedor diant fiesta 2010",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "fiesta",
+        "amortecedor"
+      ],
+      "resposta_nao_contem": [
+        "gol",
+        "palio"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "gol-95-99-capo",
+  "descricao": "Ano intervalo gol-95-99-capo",
+  "mensagens": [
+    {
+      "texto": "amortecedor capo gol 97",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "gol",
+        "capo"
+      ],
+      "resposta_nao_contem": [
+        "giii",
+        "palio"
+      ]
+    }
+  ]
+}

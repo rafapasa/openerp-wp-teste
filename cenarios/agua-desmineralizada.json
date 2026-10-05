@@ -1,0 +1,18 @@
+{
+  "id": "agua-desmineralizada",
+  "descricao": "Abreviação agua-desmineralizada",
+  "mensagens": [
+    {
+      "texto": "agua desmineralizada 1l",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "agua",
+        "desmineralizada"
+      ],
+      "resposta_nao_contem": [
+        "oleo",
+        "aditivo"
+      ]
+    }
+  ]
+}

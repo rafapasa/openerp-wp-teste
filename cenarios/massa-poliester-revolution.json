@@ -1,0 +1,18 @@
+{
+  "id": "massa-poliester-revolution",
+  "descricao": "Abreviação massa-poliester-revolution",
+  "mensagens": [
+    {
+      "texto": "massa poliester revolution 1kg cat",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "massa",
+        "poliester",
+        "revolution"
+      ],
+      "resposta_nao_contem": [
+        "plastica"
+      ]
+    }
+  ]
+}

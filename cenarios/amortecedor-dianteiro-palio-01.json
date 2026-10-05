@@ -1,0 +1,20 @@
+{
+  "id": "amortecedor-dianteiro-palio-01",
+  "descricao": "Amortecedor dianteiro Palio 01 - intervalo 01/ cobre 2005",
+  "mensagens": [
+    {
+      "texto": "amortecedor dianteiro palio 2005",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "amortecedor",
+        "dianteiro",
+        "palio"
+      ],
+      "resposta_nao_contem": [
+        "traseiro",
+        "gol",
+        "uno"
+      ]
+    }
+  ]
+}

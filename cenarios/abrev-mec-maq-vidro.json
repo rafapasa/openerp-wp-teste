@@ -1,0 +1,21 @@
+{
+  "id": "abrev-mec-maq-vidro",
+  "descricao": "Abreviação abrev-mec-maq-vidro",
+  "mensagens": [
+    {
+      "texto": "maq vidro gol g2 mec le 2p",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "maquina",
+        "vidro",
+        "gol",
+        "mecanico",
+        "esquerdo"
+      ],
+      "resposta_nao_contem": [
+        "direito",
+        "eletrico"
+      ]
+    }
+  ]
+}

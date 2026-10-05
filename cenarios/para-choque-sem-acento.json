@@ -1,0 +1,19 @@
+{
+  "id": "para-choque-sem-acento",
+  "descricao": "Para-choque escrito sem acento e sem hífen",
+  "mensagens": [
+    {
+      "texto": "para choque dianteiro gol g5",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "parachoque",
+        "gol",
+        "dianteiro"
+      ],
+      "resposta_nao_contem": [
+        "traseiro",
+        "uno"
+      ]
+    }
+  ]
+}

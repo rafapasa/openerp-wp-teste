@@ -1,0 +1,21 @@
+{
+  "id": "porta-gol-g4-dianteira-le",
+  "descricao": "Cenário marca/modelo porta-gol-g4-dianteira-le",
+  "mensagens": [
+    {
+      "texto": "porta gol g4 diant le",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "gol",
+        "porta",
+        "esquerdo",
+        "escolha",
+        "carrinho"
+      ],
+      "resposta_nao_contem": [
+        "direito",
+        "traseira"
+      ]
+    }
+  ]
+}

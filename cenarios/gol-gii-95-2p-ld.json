@@ -1,0 +1,20 @@
+{
+  "id": "gol-gii-95-2p-ld",
+  "descricao": "Ano intervalo gol-gii-95-2p-ld",
+  "mensagens": [
+    {
+      "texto": "maquina vidro gol g2 2p ld",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "gol",
+        "vidro",
+        "direito",
+        "2p"
+      ],
+      "resposta_nao_contem": [
+        "esquerdo",
+        "4p"
+      ]
+    }
+  ]
+}

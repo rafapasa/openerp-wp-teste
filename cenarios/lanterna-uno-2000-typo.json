@@ -1,0 +1,19 @@
+{
+  "id": "lanterna-uno-2000-typo",
+  "descricao": "Cenário marca/modelo lanterna-uno-2000-typo",
+  "mensagens": [
+    {
+      "texto": "lantrena uno 2000",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "uno",
+        "lanterna",
+        "escolha",
+        "carrinho"
+      ],
+      "resposta_nao_contem": [
+        "gol"
+      ]
+    }
+  ]
+}

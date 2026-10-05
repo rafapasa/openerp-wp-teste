@@ -1,0 +1,19 @@
+{
+  "id": "dois-itens-amortecedores",
+  "descricao": "Dois amortecedores dianteiro e traseiro",
+  "mensagens": [
+    {
+      "texto": "amortecedor diant e tras gol g3",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "amortecedor",
+        "gol",
+        "dianteiro",
+        "traseiro"
+      ],
+      "resposta_nao_contem": [
+        "palio"
+      ]
+    }
+  ]
+}

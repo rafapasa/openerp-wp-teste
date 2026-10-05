@@ -1,0 +1,20 @@
+{
+  "id": "maquina-vidro-gol-g2-le-typo",
+  "descricao": "Maquina vidro com erro de escrita: maqna vidro",
+  "mensagens": [
+    {
+      "texto": "maqna vidro gol g2 le",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "maquina",
+        "vidro",
+        "gol",
+        "esquerdo"
+      ],
+      "resposta_nao_contem": [
+        "direito",
+        "palio"
+      ]
+    }
+  ]
+}

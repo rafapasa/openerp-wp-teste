@@ -1,0 +1,19 @@
+{
+  "id": "abrev-alav-cambio-compl",
+  "descricao": "Abreviação abrev-alav-cambio-compl",
+  "mensagens": [
+    {
+      "texto": "alavanca cambio gol sant 5m compl",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "alavanca",
+        "cambio",
+        "gol",
+        "completa"
+      ],
+      "resposta_nao_contem": [
+        "parcial"
+      ]
+    }
+  ]
+}

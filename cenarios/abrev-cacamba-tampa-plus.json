@@ -1,0 +1,18 @@
+{
+  "id": "abrev-cacamba-tampa-plus",
+  "descricao": "Abreviação abrev-cacamba-tampa-plus",
+  "mensagens": [
+    {
+      "texto": "acab cacamba saveiro tampa",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "cacamba",
+        "saveiro",
+        "tampa"
+      ],
+      "resposta_nao_contem": [
+        "strada"
+      ]
+    }
+  ]
+}

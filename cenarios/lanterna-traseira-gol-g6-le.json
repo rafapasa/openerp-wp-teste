@@ -1,0 +1,21 @@
+{
+  "id": "lanterna-traseira-gol-g6-le",
+  "descricao": "Lanterna traseira com LE - lado esquerdo",
+  "mensagens": [
+    {
+      "texto": "lanterna traseira gol g6 le",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "lanterna",
+        "gol",
+        "traseira",
+        "esquerdo"
+      ],
+      "resposta_nao_contem": [
+        "direito",
+        "dianteira",
+        "palio"
+      ]
+    }
+  ]
+}

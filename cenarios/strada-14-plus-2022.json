@@ -1,0 +1,18 @@
+{
+  "id": "strada-14-plus-2022",
+  "descricao": "Ano intervalo strada-14-plus-2022",
+  "mensagens": [
+    {
+      "texto": "acabamento paralama strada 2022 ld",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "strada",
+        "paralama",
+        "direito"
+      ],
+      "resposta_nao_contem": [
+        "gol"
+      ]
+    }
+  ]
+}

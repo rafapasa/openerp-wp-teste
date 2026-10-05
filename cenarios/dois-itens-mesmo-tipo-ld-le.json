@@ -1,0 +1,18 @@
+{
+  "id": "dois-itens-mesmo-tipo-ld-le",
+  "descricao": "Mesmo farol LD e LE - tem que listar os dois lados",
+  "mensagens": [
+    {
+      "texto": "farol palio 09 ld e le",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "palio",
+        "direito",
+        "esquerdo"
+      ],
+      "resposta_nao_contem": [
+        "gol"
+      ]
+    }
+  ]
+}

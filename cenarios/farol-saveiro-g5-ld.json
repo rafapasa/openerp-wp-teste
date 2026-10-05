@@ -1,0 +1,20 @@
+{
+  "id": "farol-saveiro-g5-ld",
+  "descricao": "Cenário marca/modelo farol-saveiro-g5-ld",
+  "mensagens": [
+    {
+      "texto": "farol saveiro g5 ld",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "saveiro",
+        "direito",
+        "escolha",
+        "carrinho"
+      ],
+      "resposta_nao_contem": [
+        "gol",
+        "esquerdo"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aditivo-radiador-verde",
+  "descricao": "Abreviação aditivo-radiador-verde",
+  "mensagens": [
+    {
+      "texto": "aditivo radiador verde concentrado",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "aditivo",
+        "radiador",
+        "verde"
+      ],
+      "resposta_nao_contem": [
+        "rosa"
+      ]
+    }
+  ]
+}
