@@ -1,0 +1,17 @@
+{
+    "id": "limpar-carrinho",
+    "descricao": "Limpar carrinho do cache",
+    "mensagens": [
+        {
+            "texto": "Limpar carrinho",
+            "espera_resposta": true,
+            "resposta_esperada_contem": [
+                "limpo"
+            ],
+            "resposta_nao_contem": [
+                "SEU CARRINHO",
+                "Tempo estimado"
+            ]
+        }
+    ]
+}

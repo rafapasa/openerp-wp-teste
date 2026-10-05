@@ -3,7 +3,7 @@
   "mock_url": "http://localhost:9000",
   "threads": 5,
   "timeout_seconds": 60,
-  "poll_interval_ms": 500,
+  "poll_interval_ms": 1500,
   "phone_number_id": "1337919362728144",
   "from": "5549999999999",
   "wa_id": "5549999999999",

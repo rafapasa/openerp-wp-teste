@@ -7,7 +7,7 @@ BIN_DIR    := ./bin
 RUNNER     := $(BIN_DIR)/runner
 MOCK       := $(BIN_DIR)/mock
 CONFIG     ?= ./config.json
-SCENARIOS  := ./scenarios
+CENARIOS  := ./cenarios
 
 GREEN = \033[0;32m
 YELLOW = \033[0;33m
