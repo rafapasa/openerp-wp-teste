@@ -3,7 +3,7 @@
   "descricao": "Abreviação abrev-cacamba-tampa-plus",
   "mensagens": [
     {
-      "texto": "acab cacamba saveiro tampa",
+      "texto": "acab cacamba saveiro 2010 tampa",
       "espera_resposta": true,
       "resposta_esperada_contem": [
         "cacamba",

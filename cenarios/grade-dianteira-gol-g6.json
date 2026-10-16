@@ -3,7 +3,7 @@
   "descricao": "Cenário marca/modelo grade-dianteira-gol-g6",
   "mensagens": [
     {
-      "texto": "grade diant gol g6",
+      "texto": "grade diant gol g6 2015",
       "espera_resposta": true,
       "resposta_esperada_contem": [
         "gol",

@@ -6,6 +6,7 @@ import (
 	"path/filepath"
 	"rafapasa/openerp-wp-teste/internal/dto"
 	"sort"
+	"strings"
 )
 
 func Load(path string) (*dto.Config, error) {
@@ -37,21 +38,35 @@ func LoadScenarios(dir string) ([]dto.Scenario, error) {
 	if err != nil {
 		return nil, err
 	}
+
 	var out []dto.Scenario
 	for _, e := range entries {
 		if e.IsDir() || filepath.Ext(e.Name()) != ".json" {
 			continue
 		}
-		data, err := os.ReadFile(filepath.Join(dir, e.Name()))
+
+		path := filepath.Join(dir, e.Name())
+		data, err := os.ReadFile(path)
 		if err != nil {
 			return nil, err
 		}
+
 		var s dto.Scenario
 		if err := json.Unmarshal(data, &s); err != nil {
 			return nil, err
 		}
+
+		// ⚠️ ADICIONE ISTO: se ID estiver vazio, usa o nome do arquivo (sem .json)
+		if s.ID == "" {
+			s.ID = strings.TrimSuffix(e.Name(), ".json")
+		}
+
+		// ⚠️ ADICIONE ISTO: guarda o nome do arquivo
+		s.Arquivo = e.Name()
+
 		out = append(out, s)
 	}
+
 	sort.Slice(out, func(i, j int) bool { return out[i].ID < out[j].ID })
 	return out, nil
 }

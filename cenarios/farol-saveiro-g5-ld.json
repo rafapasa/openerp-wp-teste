@@ -3,7 +3,7 @@
   "descricao": "Cenário marca/modelo farol-saveiro-g5-ld",
   "mensagens": [
     {
-      "texto": "farol saveiro g5 ld",
+      "texto": "farol saveiro g5 2010 ld",
       "espera_resposta": true,
       "resposta_esperada_contem": [
         "saveiro",

@@ -3,7 +3,7 @@
   "descricao": "Cenário marca/modelo retrovisor-palio-ld-eletrico",
   "mensagens": [
     {
-      "texto": "retrovisor palio ld eletrico",
+      "texto": "retrovisor palio 2009 ld eletrico",
       "espera_resposta": true,
       "resposta_esperada_contem": [
         "palio",

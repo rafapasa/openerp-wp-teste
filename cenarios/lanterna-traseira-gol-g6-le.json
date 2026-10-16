@@ -3,7 +3,7 @@
   "descricao": "Lanterna traseira com LE - lado esquerdo",
   "mensagens": [
     {
-      "texto": "lanterna traseira gol g6 le",
+      "texto": "lanterna traseira gol g6 2015 le",
       "espera_resposta": true,
       "resposta_esperada_contem": [
         "lanterna",

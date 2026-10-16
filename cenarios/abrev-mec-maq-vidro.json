@@ -3,7 +3,7 @@
   "descricao": "Abreviação abrev-mec-maq-vidro",
   "mensagens": [
     {
-      "texto": "maq vidro gol g2 mec le 2p",
+      "texto": "maq vidro gol g2 98 mec le 2p",
       "espera_resposta": true,
       "resposta_esperada_contem": [
         "maquina",

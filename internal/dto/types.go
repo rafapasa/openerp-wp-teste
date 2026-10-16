@@ -23,6 +23,7 @@ type Mensagem struct {
 type Scenario struct {
 	ID        string     `json:"id"`
 	Descricao string     `json:"descricao"`
+	Arquivo   string     `json:"-"`
 	Mensagens []Mensagem `json:"mensagens"`
 }
 

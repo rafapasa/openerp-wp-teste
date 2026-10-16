@@ -3,7 +3,7 @@
   "descricao": "Cenário marca/modelo porta-gol-g4-dianteira-le",
   "mensagens": [
     {
-      "texto": "porta gol g4 diant le",
+      "texto": "porta gol g4 2006 diant le",
       "espera_resposta": true,
       "resposta_esperada_contem": [
         "gol",

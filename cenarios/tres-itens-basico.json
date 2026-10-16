@@ -3,7 +3,7 @@
   "descricao": "Três itens: arruela, batente e farol",
   "mensagens": [
     {
-      "texto": "manda arruela alum, batente gol 85 e farol palio ld",
+      "texto": "manda arruela alum gol 2005, batente gol 85 e farol palio 2009 ld",
       "espera_resposta": true,
       "resposta_esperada_contem": [
         "arruela",

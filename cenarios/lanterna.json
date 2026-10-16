@@ -3,7 +3,7 @@
   "descricao": "Abreviação: lanterna deve achar LANT. Um item entra; vários viram lista ou pedido de detalhe.",
   "mensagens": [
     {
-      "texto": "preciso de uma lanterna pro meu carro",
+      "texto": "preciso de uma lanterna pro meu gol 2005",
       "espera_resposta": true,
       "resposta_esperada_contem": [
         "lant",

@@ -62,6 +62,7 @@ func (c *Client) EnviarWebhook(scenarioID, from, texto string) (int, error) {
 	req, _ := http.NewRequest("POST", c.cfg.ServerURL+"/webhook", bytes.NewReader(data))
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("X-Scenario-ID", scenarioID)
+	req.Header.Set("X-tenant-ID", "4")
 	resp, err := c.http.Do(req)
 	if err != nil {
 		return 0, err

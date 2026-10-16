@@ -3,7 +3,7 @@
   "descricao": "Farol com typo falo ao inves de farol + ld",
   "mensagens": [
     {
-      "texto": "falo gol g4 ld",
+      "texto": "falo gol g4 2006 ld",
       "espera_resposta": true,
       "resposta_esperada_contem": [
         "gol",

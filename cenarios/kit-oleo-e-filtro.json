@@ -3,7 +3,7 @@
   "descricao": "Kit óleo - abreviações oleo sint 5w30",
   "mensagens": [
     {
-      "texto": "oleo 5w30 sintetico 1l",
+      "texto": "oleo 5w30 sintetico 1l gol 2005",
       "espera_resposta": true,
       "resposta_esperada_contem": [
         "oleo",

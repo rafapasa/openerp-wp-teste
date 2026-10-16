@@ -3,7 +3,7 @@
   "descricao": "Fiorino escrito errado e ld. O nome da peça traz Uno, então Uno pode aparecer. Palio e Gol não.",
   "mensagens": [
     {
-      "texto": "farol do fioniro ld",
+      "texto": "farol do fioniro 2010 ld",
       "espera_resposta": true,
       "resposta_esperada_contem": [
         "fio",

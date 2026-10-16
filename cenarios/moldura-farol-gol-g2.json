@@ -3,7 +3,7 @@
   "descricao": "Cenário marca/modelo moldura-farol-gol-g2",
   "mensagens": [
     {
-      "texto": "moldura farol gol g2",
+      "texto": "moldura farol gol g2 98",
       "espera_resposta": true,
       "resposta_esperada_contem": [
         "gol",

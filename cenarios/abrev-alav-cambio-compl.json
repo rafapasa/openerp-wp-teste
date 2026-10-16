@@ -3,7 +3,7 @@
   "descricao": "Abreviação abrev-alav-cambio-compl",
   "mensagens": [
     {
-      "texto": "alavanca cambio gol sant 5m compl",
+      "texto": "alavanca cambio gol 2000 sant 5m compl",
       "espera_resposta": true,
       "resposta_esperada_contem": [
         "alavanca",

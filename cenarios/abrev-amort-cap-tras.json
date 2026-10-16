@@ -3,7 +3,7 @@
   "descricao": "Abreviação abrev-amort-cap-tras",
   "mensagens": [
     {
-      "texto": "amort cap tras gol 95/99",
+      "texto": "amort capo tras gol 99",
       "espera_resposta": true,
       "resposta_esperada_contem": [
         "amortecedor",

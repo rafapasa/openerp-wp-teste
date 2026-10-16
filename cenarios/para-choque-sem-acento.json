@@ -3,7 +3,7 @@
   "descricao": "Para-choque escrito sem acento e sem hífen",
   "mensagens": [
     {
-      "texto": "para choque dianteiro gol g5",
+      "texto": "para choque dianteiro gol g5 2010",
       "espera_resposta": true,
       "resposta_esperada_contem": [
         "parachoque",

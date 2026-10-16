@@ -3,7 +3,7 @@
   "descricao": "Fiat escrito curto e ld. Tem que ser Fiat lado direito. Gol fica de fora.",
   "mensagens": [
     {
-      "texto": "farol fiat ld",
+      "texto": "farol fiat palio 2009 ld",
       "espera_resposta": true,
       "resposta_esperada_contem": [
         "fiat",

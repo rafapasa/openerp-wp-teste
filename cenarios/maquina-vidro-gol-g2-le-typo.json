@@ -3,7 +3,7 @@
   "descricao": "Maquina vidro com erro de escrita: maqna vidro",
   "mensagens": [
     {
-      "texto": "maqna vidro gol g2 le",
+      "texto": "maqna vidro gol g2 98 le",
       "espera_resposta": true,
       "resposta_esperada_contem": [
         "maquina",

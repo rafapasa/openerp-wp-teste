@@ -3,7 +3,7 @@
   "descricao": "Lado esquerdo por extenso. Não pode misturar o direito nem outra marca.",
   "mensagens": [
     {
-      "texto": "farol palio lado esquerdo",
+      "texto": "farol palio 2008 lado esquerdo",
       "espera_resposta": true,
       "resposta_esperada_contem": [
 	"fiat",

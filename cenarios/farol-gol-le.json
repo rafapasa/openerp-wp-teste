@@ -3,7 +3,7 @@
   "descricao": "Gol GV com le. Não pode trazer Palio, Uno nem lado direito.",
   "mensagens": [
     {
-      "texto": "farol gol gv le",
+      "texto": "farol gol gv 2010 le",
       "espera_resposta": true,
       "resposta_esperada_contem": [
         "gol",

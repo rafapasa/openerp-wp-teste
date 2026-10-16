@@ -3,7 +3,7 @@
   "descricao": "Termo largo demais. Acima de 30 itens pede detalhe e não manda a lista.",
   "mensagens": [
     {
-      "texto": "preciso de uma peça do gol",
+      "texto": "preciso de uma peça do gol 2005",
       "espera_resposta": true,
       "resposta_esperada_contem": [
         "encontrei",

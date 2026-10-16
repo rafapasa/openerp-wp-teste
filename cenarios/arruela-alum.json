@@ -3,7 +3,7 @@
   "descricao": "As duas palavras contam. Arruela sozinha não basta se houver alumínio no nome.",
   "mensagens": [
     {
-      "texto": "ARRUELA ALUM",
+      "texto": "ARRUELA ALUM gol 2005",
       "espera_resposta": true,
       "resposta_esperada_contem": [
         "arruela",

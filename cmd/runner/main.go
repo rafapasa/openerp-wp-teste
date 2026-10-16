@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"hash/fnv"
+	"hash/crc32"
 	"os"
 	"rafapasa/openerp-wp-teste/internal/client"
 	"rafapasa/openerp-wp-teste/internal/config"
@@ -31,6 +31,11 @@ type resultadoCenario struct {
 	Falha  int
 	Erro   int
 }
+
+var (
+	runSalt          = time.Now().UnixMilli() % 1000 // muda toda execução
+	phonesDaExecucao sync.Map                        // map[string]string
+)
 
 func (e *estatisticas) registrar(resultado string, httpStatus int) {
 	e.mu.Lock()
@@ -171,7 +176,7 @@ func imprimirResumo(stats *estatisticas, duracao time.Duration) {
 }
 
 func executarScenario(cli *client.Client, cfg *dto.Config, s dto.Scenario, stats *estatisticas, log *fluxo, worker int) {
-	fone := foneDoCenario(s.ID)
+	fone := getFoneDoCenario(s.ID)
 	res := resultadoCenario{Worker: worker, ID: s.ID}
 	log.add(worker, fmt.Sprintf("▶ %s — %s", s.ID, s.Descricao))
 	log.add(worker, fmt.Sprintf("  fone %s", fone))
@@ -272,8 +277,15 @@ func contemAlgum(texto string, alvos []string) bool {
 	return false
 }
 
-func foneDoCenario(id string) string {
-	h := fnv.New32a()
-	_, _ = h.Write([]byte(id))
-	return fmt.Sprintf("5549%09d", h.Sum32()%1_000_000_000)
+func getFoneDoCenario(cenarioID string) string {
+	// se já gerou pra esse cenário NESSA execução, retorna o mesmo (pra conversa multi-msg funcionar)
+	if v, ok := phonesDaExecucao.Load(cenarioID); ok {
+		return v.(string)
+	}
+	h := crc32.ChecksumIEEE([]byte(cenarioID))
+	// 55 49 9 + 8 dígitos = 13 dígitos válido
+	// 3 dígitos do runSalt + 5 dígitos do hash = sempre diferente por execução
+	fone := fmt.Sprintf("55499%03d%05d", runSalt, h%100000)
+	phonesDaExecucao.Store(cenarioID, fone)
+	return fone
 }

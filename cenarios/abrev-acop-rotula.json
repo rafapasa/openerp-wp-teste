@@ -3,7 +3,7 @@
   "descricao": "Abreviação abrev-acop-rotula",
   "mensagens": [
     {
-      "texto": "acoplamento alavanca gol pas san rotula",
+      "texto": "acoplamento alavanca gol 2000 pas san rotula",
       "espera_resposta": true,
       "resposta_esperada_contem": [
         "acoplamento",

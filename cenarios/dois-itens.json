@@ -3,7 +3,7 @@
   "descricao": "Dois itens na mesma frase. Nenhum dos dois pode sumir.",
   "mensagens": [
     {
-      "texto": "manda um batente do gol e uma arruela de aluminio",
+      "texto": "manda um batente do gol 85 e uma arruela de aluminio gol 2005",
       "espera_resposta": true,
       "resposta_esperada_contem": [
         "batente",
