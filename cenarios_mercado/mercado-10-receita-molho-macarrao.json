@@ -1,0 +1,38 @@
+{
+  "id": "mercado-10-receita-molho-macarrao",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Intenção de receita - cliente quer fazer macarronada",
+  "tags": [
+    "receita",
+    "sugestao",
+    "cross-sell"
+  ],
+  "produtos_envolvidos": [
+    "MER2-MAC-ESP-500G",
+    "MER2-MOL-TOM-340G",
+    "MER2-EXT-TOM-340G",
+    "MER2-AZE-OLI-500ML"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Quero fazer macarronada pra 4 pessoas, o que preciso?",
+      "esperado": {
+        "contem": [
+          "Macarrão",
+          "Molho de Tomate",
+          "Extrato",
+          "sugest"
+        ],
+        "intent": "receita",
+        "min_produtos": 2
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "mercado-16-estresse-muitos-itens",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Stress test - 15 produtos numa mensagem só",
+  "tags": [
+    "stress",
+    "limite",
+    "performance"
+  ],
+  "produtos_envolvidos": [
+    "MER2-ARR-INT-1KG",
+    "MER2-ARR-PAR-5KG",
+    "MER2-FEI-PRE-1KG",
+    "MER2-FEI-BRA-1KG",
+    "MER2-MAC-ESP-500G"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Lista: arroz integral, arroz parboilizado, feijão preto, feijão branco, macarrão espaguete, parafuso, penne, molho tomate, extrato, óleo girassol, azeite, vinagre, sal, açúcar mascavo, café grãos",
+      "esperado": {
+        "contem": [
+          "carrinho",
+          "15",
+          "itens"
+        ],
+        "intent": "lista_grande",
+        "min_produtos": 10
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

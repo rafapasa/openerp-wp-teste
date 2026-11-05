@@ -1,0 +1,38 @@
+{
+  "id": "mercado-07-quantidade-variada",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Quantidades variadas - 3x, meia dúzia, etc",
+  "tags": [
+    "quantidade",
+    "calculo"
+  ],
+  "produtos_envolvidos": [
+    "MER2-MAC-PEN-500G",
+    "MER2-MOL-TOM-340G",
+    "MER2-AZE-OLI-500ML"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Me vê 3 pacotes de macarrão penne, 2 molho de tomate e 1 azeite 500ml",
+      "esperado": {
+        "contem": [
+          "Macarrão Penne",
+          "3",
+          "Molho de Tomate",
+          "2",
+          "Azeite"
+        ],
+        "intent": "compra_quantidade",
+        "min_produtos": 3,
+        "total_esperado_min": 40
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

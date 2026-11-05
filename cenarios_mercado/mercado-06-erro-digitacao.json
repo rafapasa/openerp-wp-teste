@@ -1,0 +1,44 @@
+{
+  "id": "mercado-06-erro-digitacao",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Teste de resiliência a erros de digitação e sem acento",
+  "tags": [
+    "robustez",
+    "typo"
+  ],
+  "produtos_envolvidos": [
+    "MER2-ARR-INT-1KG",
+    "MER2-FEI-PRE-1KG",
+    "MER2-MAC-PAR-500G"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "qro arros integrall e fejao preto",
+      "esperado": {
+        "contem": [
+          "Arroz Integral",
+          "Feijão Preto"
+        ],
+        "intent": "busca_produto",
+        "tolerancia_typo": true
+      }
+    },
+    {
+      "de": "usuario",
+      "texto": "macarao parafuso tbm",
+      "esperado": {
+        "contem": [
+          "Macarrão Parafuso"
+        ],
+        "min_produtos": 1
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

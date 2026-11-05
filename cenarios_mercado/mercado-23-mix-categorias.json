@@ -1,0 +1,46 @@
+{
+  "id": "mercado-23-mix-categorias",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Mix total - mercearia + hortifruti + açougue na mesma compra",
+  "tags": [
+    "mix",
+    "cross-categoria",
+    "cesta-completa"
+  ],
+  "produtos_envolvidos": [
+    "MER2-ARR-INT-1KG",
+    "MER2-FEI-PRE-1KG",
+    "MER2-LAR-PER-1KG",
+    "MER2-CEN-1KG",
+    "MER2-PAT-BOV-1KG",
+    "MER2-FRA-COX-1KG"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Preciso de: arroz integral, feijão preto, 1kg laranja pera, 1kg cenoura, 1kg patinho bovino e 1kg coxa e sobrecoxa",
+      "esperado": {
+        "contem": [
+          "Arroz Integral",
+          "Feijão Preto",
+          "Laranja Pera",
+          "Cenoura",
+          "Patinho",
+          "Coxa e Sobrecoxa"
+        ],
+        "min_produtos": 6,
+        "categorias": [
+          215,
+          216,
+          217
+        ]
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

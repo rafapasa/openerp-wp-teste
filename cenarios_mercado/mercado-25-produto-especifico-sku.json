@@ -1,0 +1,45 @@
+{
+  "id": "mercado-25-produto-especifico-sku",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Busca por SKU/código - usuário tem código de barras",
+  "tags": [
+    "sku",
+    "codigo-barras"
+  ],
+  "produtos_envolvidos": [
+    "MER2-AZE-OLI-500ML"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Tem o produto MER2-AZE-OLI-500ML?",
+      "esperado": {
+        "contem": [
+          "Azeite de Oliva",
+          "Extra Virgem",
+          "29,90",
+          "500ml"
+        ],
+        "intent": "busca_sku",
+        "sku": "MER2-AZE-OLI-500ML"
+      }
+    },
+    {
+      "de": "usuario",
+      "texto": "Quero 2 unidades",
+      "esperado": {
+        "contem": [
+          "2",
+          "Azeite",
+          "carrinho"
+        ]
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

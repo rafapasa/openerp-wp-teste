@@ -1,0 +1,37 @@
+{
+  "id": "mercado-11-hortifruti-salada",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Cesta salada completa - hortifruti",
+  "tags": [
+    "hortifruti",
+    "salada"
+  ],
+  "produtos_envolvidos": [
+    "MER2-ALF-CRE",
+    "MER2-RUC",
+    "MER2-CEN-1KG",
+    "MER2-BET-1KG"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Quero montar salada: alface crespa, tomate não tem? manda rúcula, cenoura e beterraba",
+      "esperado": {
+        "contem": [
+          "Alface Crespa",
+          "Rúcula",
+          "Cenoura",
+          "Beterraba"
+        ],
+        "intent": "cesta_hortifruti",
+        "min_produtos": 3
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "multi-batente-arruela-gol-anos-distintos",
+  "descricao": "Dois produtos gol com anos diferentes na mesma frase: batente gol 85 e arruela alumínio gol 2005. Cada keyword completa com seu ano. Tenant 4 (ids 850 batente, 9014 arruela no dump).",
+  "mensagens": [
+    {
+      "texto": "manda um batente do gol 85 e uma arruela de aluminio gol 2005",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "batente",
+        "arruela",
+        "gol"
+      ],
+      "resposta_nao_contem": [
+        "palio",
+        "uno"
+      ]
+    }
+  ]
+}

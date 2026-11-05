@@ -1,0 +1,39 @@
+{
+  "id": "mercado-15-compra-grande-atacado",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Compra grande - teste limite e total",
+  "tags": [
+    "atacado",
+    "stress",
+    "total"
+  ],
+  "produtos_envolvidos": [
+    "MER2-ARR-PAR-5KG",
+    "MER2-FEI-PRE-1KG",
+    "MER2-MAC-ESP-500G",
+    "MER2-MOL-TOM-340G",
+    "MER2-OLE-GIR-900ML"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Quero 5kg arroz parboilizado, 5kg feijão preto, 10 macarrão espaguete, 10 molho tomate, 5 óleo girassol",
+      "esperado": {
+        "contem": [
+          "total",
+          "R$",
+          "carrinho"
+        ],
+        "intent": "compra_atacado",
+        "min_produtos": 5,
+        "total_esperado_min": 150
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

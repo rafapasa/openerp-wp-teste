@@ -1,0 +1,42 @@
+{
+  "id": "mercado-24-dieta-fitness",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Perfil fitness - produtos integrais, frutas, frango",
+  "tags": [
+    "dieta",
+    "fitness",
+    "sugestao"
+  ],
+  "produtos_envolvidos": [
+    "MER2-ARR-INT-1KG",
+    "MER2-FRA-PEI-1KG",
+    "MER2-BAT-DOC-1KG",
+    "MER2-BRO",
+    "MER2-MAC-FUJ-1KG",
+    "MER2-AVE-FLO-500G"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "To em dieta, quero coisas saudáveis: arroz integral, peito de frango, batata doce, brócolis, maçã e aveia",
+      "esperado": {
+        "contem": [
+          "Arroz Integral",
+          "Frango Peito",
+          "Batata Doce",
+          "Brócolis",
+          "Maçã Fuji",
+          "Aveia"
+        ],
+        "intent": "cesta_fitness",
+        "min_produtos": 5
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

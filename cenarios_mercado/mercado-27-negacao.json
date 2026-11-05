@@ -1,0 +1,47 @@
+{
+  "id": "mercado-27-negacao",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Teste negação - cliente diz o que NÃO quer",
+  "tags": [
+    "negacao",
+    "nlu"
+  ],
+  "produtos_envolvidos": [
+    "MER2-FEI-PRE-1KG",
+    "MER2-ARR-INT-1KG"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Quero feijão mas não quero feijão branco, só preto",
+      "esperado": {
+        "contem": [
+          "Feijão Preto"
+        ],
+        "nao_contem": [
+          "Feijão Branco"
+        ],
+        "intent": "busca_com_negacao",
+        "min_produtos": 1
+      }
+    },
+    {
+      "de": "usuario",
+      "texto": "e arroz mas sem ser parboilizado",
+      "esperado": {
+        "contem": [
+          "Arroz Integral"
+        ],
+        "nao_contem": [
+          "Parboilizado"
+        ]
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

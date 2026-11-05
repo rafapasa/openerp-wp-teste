@@ -1,0 +1,57 @@
+{
+  "id": "mercado-26-duplicidade",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Teste duplicidade - cliente adiciona mesmo produto 2x",
+  "tags": [
+    "duplicidade",
+    "carrinho",
+    "edge"
+  ],
+  "produtos_envolvidos": [
+    "MER2-ARR-INT-1KG"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Adiciona arroz integral 1kg",
+      "esperado": {
+        "contem": [
+          "Arroz Integral",
+          "adicionado"
+        ]
+      }
+    },
+    {
+      "de": "usuario",
+      "texto": "Adiciona arroz integral 1kg de novo",
+      "esperado": {
+        "contem": [
+          "Arroz Integral",
+          "quantidade",
+          "2",
+          "atualizado"
+        ],
+        "intent": "atualizar_quantidade"
+      }
+    },
+    {
+      "de": "usuario",
+      "texto": "quanto tem no carrinho agora?",
+      "esperado": {
+        "contem": [
+          "Arroz Integral",
+          "2",
+          "un",
+          "19,80"
+        ],
+        "quantidade": 2
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

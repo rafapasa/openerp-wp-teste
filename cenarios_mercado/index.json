@@ -1,0 +1,264 @@
+{
+  "segmento": "mercado",
+  "total_cenarios": 30,
+  "tenant_id": 5,
+  "gerado_em": "2026-10-22",
+  "fix_429": "Use getFoneDoCenario com runSalt conforme correção anterior para evitar 429. Todos IDs são únicos por execução mas estáveis dentro do cenário multi-mensagem.",
+  "cenarios": [
+    {
+      "id": "mercado-01-arroz-basico",
+      "descricao": "Compra simples de arroz - teste de busca exata e preço",
+      "tags": [
+        "smoke",
+        "busca-exata",
+        "mercearia"
+      ]
+    },
+    {
+      "id": "mercado-02-lista-semanal",
+      "descricao": "Lista semanal basica - arroz, feijão, macarrão, molho",
+      "tags": [
+        "fluxo-completo",
+        "multi-produto"
+      ]
+    },
+    {
+      "id": "mercado-03-frutas-kg",
+      "descricao": "Compra por peso - hortifruti com kg e unidades mistas",
+      "tags": [
+        "hortifruti",
+        "unidade-kg"
+      ]
+    },
+    {
+      "id": "mercado-04-carnes-churrasco",
+      "descricao": "Cesta churrasco - teste açougue com vários cortes",
+      "tags": [
+        "acougue",
+        "churrasco",
+        "ticket-medio-alto"
+      ]
+    },
+    {
+      "id": "mercado-05-busca-preco-barato",
+      "descricao": "Busca por preço - usuário quer mais barato",
+      "tags": [
+        "preco",
+        "ordenacao"
+      ]
+    },
+    {
+      "id": "mercado-06-erro-digitacao",
+      "descricao": "Teste de resiliência a erros de digitação e sem acento",
+      "tags": [
+        "robustez",
+        "typo"
+      ]
+    },
+    {
+      "id": "mercado-07-quantidade-variada",
+      "descricao": "Quantidades variadas - 3x, meia dúzia, etc",
+      "tags": [
+        "quantidade",
+        "calculo"
+      ]
+    },
+    {
+      "id": "mercado-08-carrinho-adicionar-remover",
+      "descricao": "Fluxo carrinho - adicionar, listar, remover",
+      "tags": [
+        "carrinho",
+        "fluxo"
+      ]
+    },
+    {
+      "id": "mercado-09-comparar-produtos",
+      "descricao": "Comparação entre produtos similares",
+      "tags": [
+        "comparacao",
+        "mercearia"
+      ]
+    },
+    {
+      "id": "mercado-10-receita-molho-macarrao",
+      "descricao": "Intenção de receita - cliente quer fazer macarronada",
+      "tags": [
+        "receita",
+        "sugestao",
+        "cross-sell"
+      ]
+    },
+    {
+      "id": "mercado-11-hortifruti-salada",
+      "descricao": "Cesta salada completa - hortifruti",
+      "tags": [
+        "hortifruti",
+        "salada"
+      ]
+    },
+    {
+      "id": "mercado-12-tempero-e-oleo",
+      "descricao": "Compra de temperos e óleos - teste categoria 215 final",
+      "tags": [
+        "tempero",
+        "mercearia"
+      ]
+    },
+    {
+      "id": "mercado-13-cafe-manha",
+      "descricao": "Café da manhã completo - biscoito, café, leite condensado etc",
+      "tags": [
+        "cafe-manha",
+        "mercearia"
+      ]
+    },
+    {
+      "id": "mercado-14-pipoca-filme",
+      "descricao": "Cesta filme - pipoca, achocolatado, biscoito recheado",
+      "tags": [
+        "lazer",
+        "snack"
+      ]
+    },
+    {
+      "id": "mercado-15-compra-grande-atacado",
+      "descricao": "Compra grande - teste limite e total",
+      "tags": [
+        "atacado",
+        "stress",
+        "total"
+      ]
+    },
+    {
+      "id": "mercado-16-estresse-muitos-itens",
+      "descricao": "Stress test - 15 produtos numa mensagem só",
+      "tags": [
+        "stress",
+        "limite",
+        "performance"
+      ]
+    },
+    {
+      "id": "mercado-17-pergunta-sem-produto",
+      "descricao": "Pergunta genérica sem produto - teste fallback",
+      "tags": [
+        "fallback",
+        "sem-produto"
+      ]
+    },
+    {
+      "id": "mercado-18-coloquial",
+      "descricao": "Linguagem coloquial brasileira",
+      "tags": [
+        "linguagem-natural",
+        "coloquial"
+      ]
+    },
+    {
+      "id": "mercado-19-mudanca-ideia",
+      "descricao": "Cliente muda de ideia no meio do fluxo",
+      "tags": [
+        "mudanca",
+        "fluxo",
+        "carrinho"
+      ]
+    },
+    {
+      "id": "mercado-20-pagamento-entrega",
+      "descricao": "Fluxo completo até pagamento e entrega",
+      "tags": [
+        "checkout",
+        "pagamento",
+        "entrega"
+      ]
+    },
+    {
+      "id": "mercado-21-produto-indisponivel",
+      "descricao": "Produto inexistente ou indisponível - fallback e sugestão",
+      "tags": [
+        "indisponivel",
+        "fallback",
+        "sugestao"
+      ]
+    },
+    {
+      "id": "mercado-22-unidade-confusa",
+      "descricao": "Confusão unidade medida - cliente pede unidade de produto kg",
+      "tags": [
+        "unidade",
+        "kg",
+        "edge-case"
+      ]
+    },
+    {
+      "id": "mercado-23-mix-categorias",
+      "descricao": "Mix total - mercearia + hortifruti + açougue na mesma compra",
+      "tags": [
+        "mix",
+        "cross-categoria",
+        "cesta-completa"
+      ]
+    },
+    {
+      "id": "mercado-24-dieta-fitness",
+      "descricao": "Perfil fitness - produtos integrais, frutas, frango",
+      "tags": [
+        "dieta",
+        "fitness",
+        "sugestao"
+      ]
+    },
+    {
+      "id": "mercado-25-produto-especifico-sku",
+      "descricao": "Busca por SKU/código - usuário tem código de barras",
+      "tags": [
+        "sku",
+        "codigo-barras"
+      ]
+    },
+    {
+      "id": "mercado-26-duplicidade",
+      "descricao": "Teste duplicidade - cliente adiciona mesmo produto 2x",
+      "tags": [
+        "duplicidade",
+        "carrinho",
+        "edge"
+      ]
+    },
+    {
+      "id": "mercado-27-negacao",
+      "descricao": "Teste negação - cliente diz o que NÃO quer",
+      "tags": [
+        "negacao",
+        "nlu"
+      ]
+    },
+    {
+      "id": "mercado-28-orcamento-limitado",
+      "descricao": "Cliente com orçamento limitado R$ 50",
+      "tags": [
+        "orcamento",
+        "preco",
+        "sugestao"
+      ]
+    },
+    {
+      "id": "mercado-29-unidade-vs-kg-horti",
+      "descricao": "Hortifruti teste unidade vs kg - alface, couve, etc são un",
+      "tags": [
+        "hortifruti",
+        "unidade"
+      ]
+    },
+    {
+      "id": "mercado-30-fluxo-completo-checkout",
+      "descricao": "Fluxo completo E2E - do oi ao pagamento",
+      "tags": [
+        "e2e",
+        "checkout",
+        "fluxo-completo",
+        "critico"
+      ]
+    }
+  ]
+}

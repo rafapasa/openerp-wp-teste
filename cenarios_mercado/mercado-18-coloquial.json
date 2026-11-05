@@ -1,0 +1,43 @@
+{
+  "id": "mercado-18-coloquial",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Linguagem coloquial brasileira",
+  "tags": [
+    "linguagem-natural",
+    "coloquial"
+  ],
+  "produtos_envolvidos": [
+    "MER2-FEI-PRE-1KG",
+    "MER2-ARR-INT-1KG"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Fala meu mano, me vê um feijão ai e um arroz parça",
+      "esperado": {
+        "contem": [
+          "Feijão",
+          "Arroz"
+        ],
+        "intent": "busca_produto",
+        "linguagem": "coloquial"
+      }
+    },
+    {
+      "de": "usuario",
+      "texto": "Tem aquela parada de macarrão? me manda 2",
+      "esperado": {
+        "contem": [
+          "Macarrão"
+        ],
+        "min_produtos": 1
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

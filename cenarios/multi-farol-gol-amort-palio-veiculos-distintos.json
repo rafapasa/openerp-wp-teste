@@ -1,0 +1,20 @@
+{
+  "id": "multi-farol-gol-amort-palio-veiculos-distintos",
+  "descricao": "Multi-item veículos distintos: farol do gol 2010 e amortecedor do palio 2001. Cada keyword com seu veículo. Tenant 4 (dump-23-10-2026).",
+  "mensagens": [
+    {
+      "texto": "farol do gol 2010 e amortecedor do palio 2001",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "farol",
+        "gol",
+        "amortecedor",
+        "palio"
+      ],
+      "resposta_nao_contem": [
+        "corsa",
+        "uno"
+      ]
+    }
+  ]
+}

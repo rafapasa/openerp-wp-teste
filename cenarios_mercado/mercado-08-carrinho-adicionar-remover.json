@@ -1,0 +1,66 @@
+{
+  "id": "mercado-08-carrinho-adicionar-remover",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Fluxo carrinho - adicionar, listar, remover",
+  "tags": [
+    "carrinho",
+    "fluxo"
+  ],
+  "produtos_envolvidos": [
+    "MER2-ARR-PAR-5KG",
+    "MER2-FEI-BRA-1KG"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Adiciona arroz parboilizado 5kg no carrinho",
+      "esperado": {
+        "contem": [
+          "Arroz Parboilizado",
+          "adicionado",
+          "carrinho"
+        ],
+        "intent": "adicionar_carrinho"
+      }
+    },
+    {
+      "de": "usuario",
+      "texto": "agora adiciona feijão branco 1kg",
+      "esperado": {
+        "contem": [
+          "Feijão Branco",
+          "carrinho"
+        ]
+      }
+    },
+    {
+      "de": "usuario",
+      "texto": "o que tem no carrinho?",
+      "esperado": {
+        "contem": [
+          "Arroz Parboilizado",
+          "Feijão Branco",
+          "total"
+        ],
+        "intent": "listar_carrinho"
+      }
+    },
+    {
+      "de": "usuario",
+      "texto": "remove o feijão branco",
+      "esperado": {
+        "contem": [
+          "removido",
+          "Feijão Branco"
+        ],
+        "intent": "remover_carrinho"
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

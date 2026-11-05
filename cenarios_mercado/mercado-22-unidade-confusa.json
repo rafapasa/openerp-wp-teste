@@ -1,0 +1,49 @@
+{
+  "id": "mercado-22-unidade-confusa",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Confusão unidade medida - cliente pede unidade de produto kg",
+  "tags": [
+    "unidade",
+    "kg",
+    "edge-case"
+  ],
+  "produtos_envolvidos": [
+    "MER2-MAC-FUJ-1KG",
+    "MER2-SAL-REF-1KG"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Quero 1 unidade de maçã fuji",
+      "esperado": {
+        "contem": [
+          "Maçã Fuji",
+          "1kg",
+          "kg",
+          "unidade"
+        ],
+        "intent": "esclarecimento_unidade",
+        "min_produtos": 1
+      }
+    },
+    {
+      "de": "usuario",
+      "texto": "e 1kg de sal refinado?",
+      "esperado": {
+        "contem": [
+          "Sal Refinado",
+          "un",
+          "pacote",
+          "1kg"
+        ],
+        "intent": "esclarecimento_unidade"
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

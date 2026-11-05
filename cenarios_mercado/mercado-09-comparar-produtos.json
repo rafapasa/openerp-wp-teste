@@ -1,0 +1,36 @@
+{
+  "id": "mercado-09-comparar-produtos",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Comparação entre produtos similares",
+  "tags": [
+    "comparacao",
+    "mercearia"
+  ],
+  "produtos_envolvidos": [
+    "MER2-ARR-INT-1KG",
+    "MER2-ARR-PAR-5KG"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Qual a diferença entre arroz integral e parboilizado? preço?",
+      "esperado": {
+        "contem": [
+          "Arroz Integral",
+          "9,90",
+          "Arroz Parboilizado",
+          "24,90",
+          "diferença"
+        ],
+        "intent": "comparar_produtos",
+        "min_produtos": 2
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

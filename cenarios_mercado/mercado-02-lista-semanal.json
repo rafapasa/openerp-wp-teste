@@ -1,0 +1,48 @@
+{
+  "id": "mercado-02-lista-semanal",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Lista semanal basica - arroz, feijão, macarrão, molho",
+  "tags": [
+    "fluxo-completo",
+    "multi-produto"
+  ],
+  "produtos_envolvidos": [
+    "MER2-ARR-INT-1KG",
+    "MER2-FEI-PRE-1KG",
+    "MER2-MAC-ESP-500G",
+    "MER2-MOL-TOM-340G"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Preciso fazer compra da semana: arroz, feijão preto e macarrão espaguete",
+      "esperado": {
+        "contem": [
+          "Arroz",
+          "Feijão Preto",
+          "Macarrão Espaguete"
+        ],
+        "intent": "lista_compra",
+        "min_produtos": 3
+      }
+    },
+    {
+      "de": "usuario",
+      "texto": "adiciona molho de tomate também",
+      "esperado": {
+        "contem": [
+          "Molho de Tomate",
+          "adicionado",
+          "carrinho"
+        ],
+        "min_produtos": 1
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

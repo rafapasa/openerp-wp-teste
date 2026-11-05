@@ -1,0 +1,34 @@
+{
+  "id": "mercado-14-pipoca-filme",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Cesta filme - pipoca, achocolatado, biscoito recheado",
+  "tags": [
+    "lazer",
+    "snack"
+  ],
+  "produtos_envolvidos": [
+    "MER2-MIL-PIP-500G",
+    "MER2-PIP-MIC-100G",
+    "MER2-ACH-PO-400G"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Hoje tem filme, quero milho de pipoca, pipoca microondas e achocolatado",
+      "esperado": {
+        "contem": [
+          "Milho de Pipoca",
+          "Pipoca Microondas",
+          "Achocolatado"
+        ],
+        "min_produtos": 3
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

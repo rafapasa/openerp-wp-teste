@@ -1,0 +1,39 @@
+{
+  "id": "mercado-29-unidade-vs-kg-horti",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Hortifruti teste unidade vs kg - alface, couve, etc são un",
+  "tags": [
+    "hortifruti",
+    "unidade"
+  ],
+  "produtos_envolvidos": [
+    "MER2-ALF-CRE",
+    "MER2-COU-MAN",
+    "MER2-SAL",
+    "MER2-BAT-DOC-1KG"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Quero 2 alface crespa, 1 couve manteiga, 1 maço de salsinha e 2kg de batata doce",
+      "esperado": {
+        "contem": [
+          "Alface Crespa",
+          "2",
+          "un",
+          "Couve Manteiga",
+          "Salsinha",
+          "Batata Doce",
+          "2kg"
+        ],
+        "min_produtos": 4
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

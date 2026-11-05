@@ -1,0 +1,46 @@
+{
+  "id": "mercado-21-produto-indisponivel",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Produto inexistente ou indisponível - fallback e sugestão",
+  "tags": [
+    "indisponivel",
+    "fallback",
+    "sugestao"
+  ],
+  "produtos_envolvidos": [
+    "MER2-ALC-BOV-1KG"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Tem picanha premium 2kg?",
+      "esperado": {
+        "contem": [
+          "não temos",
+          "indisponível",
+          "Maminha",
+          "Alcatra",
+          "sugest"
+        ],
+        "intent": "produto_indisponivel",
+        "sugestao": true
+      }
+    },
+    {
+      "de": "usuario",
+      "texto": "então manda alcatra 1kg",
+      "esperado": {
+        "contem": [
+          "Alcatra",
+          "adicionado"
+        ]
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

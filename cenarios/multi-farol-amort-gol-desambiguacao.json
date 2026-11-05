@@ -1,0 +1,18 @@
+{
+  "id": "multi-farol-amort-gol-desambiguacao",
+  "descricao": "Multi-item mesmo veículo com possível lista de escolha: farol ld e amortecedor traseiro gol. Testa busca isolada + fila de escolha. Tenant 4.",
+  "mensagens": [
+    {
+      "texto": "farol lado esquerdo e amortecedor traseiro do gol 2008",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "farol",
+        "gol"
+      ],
+      "resposta_nao_contem": [
+        "palio",
+        "fiorino"
+      ]
+    }
+  ]
+}

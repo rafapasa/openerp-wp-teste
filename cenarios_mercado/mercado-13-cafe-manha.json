@@ -1,0 +1,36 @@
+{
+  "id": "mercado-13-cafe-manha",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Café da manhã completo - biscoito, café, leite condensado etc",
+  "tags": [
+    "cafe-manha",
+    "mercearia"
+  ],
+  "produtos_envolvidos": [
+    "MER2-CAF-GRA-1KG",
+    "MER2-BIS-CRE-400G",
+    "MER2-DOC-LEI-400G",
+    "MER2-LEI-CON-395G"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Monta meu café da manhã: café em grãos, biscoito cream cracker, doce de leite e leite condensado",
+      "esperado": {
+        "contem": [
+          "Café em Grãos",
+          "Biscoito Cream Cracker",
+          "Doce de Leite",
+          "Leite Condensado"
+        ],
+        "min_produtos": 4
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

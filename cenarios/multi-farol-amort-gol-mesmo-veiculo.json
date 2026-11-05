@@ -1,0 +1,20 @@
+{
+  "id": "multi-farol-amort-gol-mesmo-veiculo",
+  "descricao": "Multi-item mesmo veículo: farol e amortecedor do gol 2000. Cada peça deve herdar gol/2000. Tenant 4.",
+  "mensagens": [
+    {
+      "texto": "farol e amortecedor do gol 2000",
+      "espera_resposta": true,
+      "resposta_esperada_contem": [
+        "farol",
+        "amortecedor",
+        "gol"
+      ],
+      "resposta_nao_contem": [
+        "palio",
+        "corsa",
+        "uno"
+      ]
+    }
+  ]
+}

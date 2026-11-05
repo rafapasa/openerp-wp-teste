@@ -1,0 +1,34 @@
+{
+  "id": "mercado-01-arroz-basico",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Compra simples de arroz - teste de busca exata e preço",
+  "tags": [
+    "smoke",
+    "busca-exata",
+    "mercearia"
+  ],
+  "produtos_envolvidos": [
+    "MER2-ARR-INT-1KG"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Oi, quero comprar arroz integral",
+      "esperado": {
+        "contem": [
+          "Arroz Integral",
+          "9,90",
+          "1kg"
+        ],
+        "intent": "busca_produto",
+        "min_produtos": 1
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

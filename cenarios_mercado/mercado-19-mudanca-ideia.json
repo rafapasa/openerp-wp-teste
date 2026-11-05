@@ -1,0 +1,58 @@
+{
+  "id": "mercado-19-mudanca-ideia",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Cliente muda de ideia no meio do fluxo",
+  "tags": [
+    "mudanca",
+    "fluxo",
+    "carrinho"
+  ],
+  "produtos_envolvidos": [
+    "MER2-ACE-BOV-1KG",
+    "MER2-PAT-BOV-1KG",
+    "MER2-FRA-PEI-1KG"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Quero 1kg de acém bovino",
+      "esperado": {
+        "contem": [
+          "Acém Bovino",
+          "34,90"
+        ],
+        "intent": "adicionar_carrinho"
+      }
+    },
+    {
+      "de": "usuario",
+      "texto": "Na verdade troca por patinho bovino 1kg",
+      "esperado": {
+        "contem": [
+          "Patinho Bovino",
+          "54,90",
+          "trocado",
+          "removido"
+        ],
+        "intent": "trocar_produto"
+      }
+    },
+    {
+      "de": "usuario",
+      "texto": "e adiciona 1kg de frango peito filé",
+      "esperado": {
+        "contem": [
+          "Frango Peito Filé",
+          "carrinho"
+        ],
+        "min_produtos": 1
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "mercado-12-tempero-e-oleo",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Compra de temperos e óleos - teste categoria 215 final",
+  "tags": [
+    "tempero",
+    "mercearia"
+  ],
+  "produtos_envolvidos": [
+    "MER2-OLE-GIR-900ML",
+    "MER2-AZE-OLI-500ML",
+    "MER2-SAL-REF-1KG"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Preciso de óleo de girassol, azeite extra virgem e sal refinado",
+      "esperado": {
+        "contem": [
+          "Óleo de Girassol",
+          "Azeite",
+          "Sal Refinado",
+          "12,90",
+          "29,90"
+        ],
+        "min_produtos": 3
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

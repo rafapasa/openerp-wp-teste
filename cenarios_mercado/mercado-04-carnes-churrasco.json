@@ -1,0 +1,48 @@
+{
+  "id": "mercado-04-carnes-churrasco",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Cesta churrasco - teste açougue com vários cortes",
+  "tags": [
+    "acougue",
+    "churrasco",
+    "ticket-medio-alto"
+  ],
+  "produtos_envolvidos": [
+    "MER2-ALC-BOV-1KG",
+    "MER2-LIN-TOS-1KG",
+    "MER2-MAM-BOV-1KG"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Vou fazer churrasco, quero alcatra, linguiça toscana e picanha? se não tiver picanha manda maminha",
+      "esperado": {
+        "contem": [
+          "Alcatra",
+          "Linguiça Toscana",
+          "Maminha"
+        ],
+        "intent": "cesta_churrasco",
+        "min_produtos": 2
+      }
+    },
+    {
+      "de": "usuario",
+      "texto": "quanto fica 1kg de cada?",
+      "esperado": {
+        "contem": [
+          "69,90",
+          "32,90",
+          "total"
+        ],
+        "intent": "calculo_preco"
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "mercado-03-frutas-kg",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Compra por peso - hortifruti com kg e unidades mistas",
+  "tags": [
+    "hortifruti",
+    "unidade-kg"
+  ],
+  "produtos_envolvidos": [
+    "MER2-MAC-FUJ-1KG",
+    "MER2-LAR-PER-1KG"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Quero 2kg de maçã fuji e 1kg de laranja pera",
+      "esperado": {
+        "contem": [
+          "Maçã Fuji",
+          "Laranja Pera",
+          "2",
+          "kg"
+        ],
+        "intent": "compra_por_peso",
+        "min_produtos": 2
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

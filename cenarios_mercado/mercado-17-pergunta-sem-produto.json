@@ -1,0 +1,33 @@
+{
+  "id": "mercado-17-pergunta-sem-produto",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Pergunta genérica sem produto - teste fallback",
+  "tags": [
+    "fallback",
+    "sem-produto"
+  ],
+  "produtos_envolvidos": [],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Vocês entregam hoje?",
+      "esperado": {
+        "contem": [
+          "entrega",
+          "horário",
+          "frete"
+        ],
+        "intent": "pergunta_entrega",
+        "nao_contem": [
+          "Arroz Integral"
+        ]
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

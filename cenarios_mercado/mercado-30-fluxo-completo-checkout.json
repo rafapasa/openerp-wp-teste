@@ -1,0 +1,78 @@
+{
+  "id": "mercado-30-fluxo-completo-checkout",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Fluxo completo E2E - do oi ao pagamento",
+  "tags": [
+    "e2e",
+    "checkout",
+    "fluxo-completo",
+    "critico"
+  ],
+  "produtos_envolvidos": [
+    "MER2-ARR-INT-1KG",
+    "MER2-FEI-PRE-1KG",
+    "MER2-LAR-PER-1KG",
+    "MER2-PAT-BOV-1KG"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Oi",
+      "esperado": {
+        "contem": [
+          "Olá",
+          "bem-vindo",
+          "mercado"
+        ],
+        "intent": "saudacao"
+      }
+    },
+    {
+      "de": "usuario",
+      "texto": "Quero comprar: 1 arroz integral 1kg, 1 feijão preto 1kg, 1kg de laranja pera, 1kg patinho bovino",
+      "esperado": {
+        "contem": [
+          "Arroz Integral",
+          "Feijão Preto",
+          "Laranja Pera",
+          "Patinho Bovino"
+        ],
+        "min_produtos": 4
+      }
+    },
+    {
+      "de": "usuario",
+      "texto": "Fecha a conta",
+      "esperado": {
+        "contem": [
+          "resumo",
+          "total",
+          "R$",
+          "carrinho"
+        ],
+        "intent": "fechar_conta",
+        "min_produtos": 4
+      }
+    },
+    {
+      "de": "usuario",
+      "texto": "Quero pagar no pix e entregar em Maravilha",
+      "esperado": {
+        "contem": [
+          "pix",
+          "chave",
+          "entrega",
+          "Maravilha",
+          "confirmado"
+        ],
+        "intent": "checkout_finalizado"
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "mercado-05-busca-preco-barato",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Busca por preço - usuário quer mais barato",
+  "tags": [
+    "preco",
+    "ordenacao"
+  ],
+  "produtos_envolvidos": [
+    "MER2-ARR-INT-1KG",
+    "MER2-FEI-PRE-1KG"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Qual o arroz mais barato que você tem?",
+      "esperado": {
+        "contem": [
+          "Arroz",
+          "9,90",
+          "Integral"
+        ],
+        "intent": "busca_por_preco",
+        "ordenacao": "preco_asc"
+      }
+    },
+    {
+      "de": "usuario",
+      "texto": "e o feijão mais barato?",
+      "esperado": {
+        "contem": [
+          "Feijão Preto",
+          "9,49"
+        ],
+        "min_produtos": 1
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}

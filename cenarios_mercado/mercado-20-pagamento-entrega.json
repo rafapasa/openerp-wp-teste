@@ -1,0 +1,61 @@
+{
+  "id": "mercado-20-pagamento-entrega",
+  "segmento": "mercado",
+  "tenant_id": 5,
+  "descricao": "Fluxo completo até pagamento e entrega",
+  "tags": [
+    "checkout",
+    "pagamento",
+    "entrega"
+  ],
+  "produtos_envolvidos": [
+    "MER2-MAC-FUJ-1KG",
+    "MER2-MOI-BOV-1KG",
+    "MER2-ARR-INT-1KG"
+  ],
+  "mensagens": [
+    {
+      "de": "usuario",
+      "texto": "Quero fechar compra: 2kg maçã fuji, 1kg carne moída, 1 arroz integral",
+      "esperado": {
+        "contem": [
+          "Maçã Fuji",
+          "Carne Moída",
+          "Arroz Integral",
+          "carrinho"
+        ],
+        "min_produtos": 3
+      }
+    },
+    {
+      "de": "usuario",
+      "texto": "Qual forma de pagamento?",
+      "esperado": {
+        "contem": [
+          "pix",
+          "cartão",
+          "dinheiro",
+          "pagamento"
+        ],
+        "intent": "pergunta_pagamento"
+      }
+    },
+    {
+      "de": "usuario",
+      "texto": "Entrega em Maravilha SC, quanto fica frete?",
+      "esperado": {
+        "contem": [
+          "frete",
+          "Maravilha",
+          "entrega"
+        ],
+        "intent": "calculo_frete"
+      }
+    }
+  ],
+  "config": {
+    "timeout_ms": 15000,
+    "esperar_entre_mensagens_ms": 1200,
+    "lingua": "pt-BR"
+  }
+}
